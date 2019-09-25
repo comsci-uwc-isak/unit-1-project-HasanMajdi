@@ -25,7 +25,7 @@ For documentation READ.ME file will be provided and also bash help.
 Design
 ---------
 ### First sketch of system 
-![CarRental](CS ProjectMap.jpg)
+![CarRental](CS ProjectMap.png)
 **fig. 1** This program shows the main components of the minimal rental app. it includes the Output/Input and actions. 
 
 Development
