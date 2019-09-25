@@ -25,11 +25,32 @@ For documentation READ.ME file will be provided and also bash help.
 Design
 ---------
 ### First sketch of system 
-![CarRental](CS ProjectMap.png)
+![CarRental](CS ProjectMap.jpg)
 **fig. 1** This program shows the main components of the minimal rental app. it includes the Output/Input and actions. 
 
 Development
 --------
+``` sh 
+#!/bash/bin
+
+#This program creatsfile structure for the minimal rental app
+echo "start installing"
+echo "installing in desktop (default). Press enter"
+read
+cd ~/Desktop
+
+#create app folder
+mkdir RentalCarApp
+
+cd RentalCarApp
+
+mkdir database
+mkdir sripts
+echo "installation complete successfully"
+
+```
+this script meets the requirement of the client for a simple instalation 
+however, it 
 
 Evaluation
 -----------
