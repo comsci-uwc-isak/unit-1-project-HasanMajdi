@@ -28,6 +28,10 @@ Design
 ![CarRental](CSProject.jpg)
 **fig. 1** This program shows the main components of the minimal rental app. it includes the Output/Input and actions. 
 
+### flow diagram 
+
+### flow program for creating a frame in bash terminal
+
 Development
 --------
 ``` sh 
@@ -52,6 +56,14 @@ echo "installation complete successfully"
 this script meets the requirement of the client for a simple instalation 
 however, it 
 
+
+### problem solving 
+1 how to detect is a words lenght is odd or even 
+```.sh 
+if [ $len%2 -eq 0 ]
+```
+how to create a unistall program 
+rm -r app 
 Evaluation
 -----------
 
