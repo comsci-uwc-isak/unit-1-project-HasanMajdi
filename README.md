@@ -34,6 +34,17 @@ Design
 
 Development
 --------
+### Edit 
+Get inputs (license plate)
+  
+Check arguments and Check if car exists  (ONLY ONE) if not one then show a message to user to enter the right argument 
+
+If one then show a message asking what do you want to edit ? (color, name, model, ect..)
+
+Edit the information 
+
+Save new info 
+
 ``` sh 
 #!/bash/bin
 
@@ -53,9 +64,7 @@ mkdir sripts
 echo "installation complete successfully"
 
 ```
-this script meets the requirement of the client for a simple instalation 
-however, it 
-
+this script meets the requirement of the client for a simple instalation
 
 ### problem solving 
 1 how to detect is a words lenght is odd or even 
