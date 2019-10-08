@@ -29,12 +29,14 @@ Design
 **fig. 1** This program shows the main components of the minimal rental app. it includes the Output/Input and actions. 
 
 ### flow diagram 
+![CarRental](flow.jpg)
+**fg. 1**   
 
 ### flow program for creating a frame in bash terminal
 
 Development
 --------
-### Edit 
+### Action: Edit 
 Get inputs (license plate)
   
 Check arguments and Check if car exists  (ONLY ONE) if not one then show a message to user to enter the right argument 
@@ -75,6 +77,20 @@ how to create a unistall program
 rm -r app 
 Evaluation
 -----------
+Test 1: A car can be created and sorted in the database 
+for this purpose we will create the file testCreate.sh. this is called software testing 
+# step1 navigate to the folder containing crete.sh file
 
+first step is to check for the file 
+```.sh
+cd../scripts/
+if [ -f "createe.sh" ]; then
+        echo "file exists, test wil start now"
+else
+        echo "file create.sh does not exist. test failed"
+fi
+```
+here the option -f in the if condition checks for a file in the working folder 
 
+this correspnds to 
 
