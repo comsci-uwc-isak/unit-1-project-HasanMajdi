@@ -21,6 +21,17 @@ Every car will have its own file with its information, and there is going to be 
 Another TXT file is going to calculate the history of the car (Km/h) and give the total distance that the car passed.
 In summary the program will show the name of the car, the total distance with Km, and number of the trips. 
 For documentation READ.ME file will be provided and also bash help.
+### Solution proposed
+so we decided to use a bash program for the solution because the user asks for something easy and simple.
+also we're working on the terminal because its already on the computer.
+### Success Criteria
+A car can be created and stored in the database
+A car information can be edited
+A car can be deleted
+The installation is simple 
+A summery can be generated for a particular car
+Trips can be recorded and stored for an existing car.
+A basic backup plan is available.
 
 Design
 ---------
@@ -92,5 +103,5 @@ fi
 ```
 here the option -f in the if condition checks for a file in the working folder 
 
-this correspnds to 
+this correspnds to dynamic testing and alpha.
 
