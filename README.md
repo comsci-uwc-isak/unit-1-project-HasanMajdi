@@ -45,11 +45,80 @@ Design
 ![CarRental](CSProject.jpg)
 **fig. 1** This program shows the main components of the minimal rental app. it includes the Output/Input and actions. 
 
-### flow diagram 
+### flow diagram for creating a frame in bash terminal
 ![CarRental](flow.jpg)
-**fg. 1**  this program 
+**fg. 1**  this program creats a frame in the bash 
+# script for frame 
+``` sh 
 
-### flow program for creating a frame in bash terminal
+#!/bin/bash
+
+word=$1
+len=${#word}
+padding=4
+
+echo $len
+
+#lenght of the frame
+width=80 
+(( spaces=$width/2-$len/2-1 )) #didnt got why //
+echo $spaces
+
+#Print a whole line with symbol
+for (( i=0; i<$width; i++ ))
+do
+        echo -n "#"
+done
+	echo " "  #this is for going down one line
+
+#prints the padding
+for (( p=1; p<padding ; p++ ))
+do
+     echo -n "#"   #how the program show spaces without variable
+        for (( s=0; s<$width-2; s++ ))
+        do
+                echo -n " "
+        done
+        echo "#"
+done
+
+#line for the word
+	echo -n "#"
+for (( s=0; s<$spaces; s++ ))
+do
+        echo -n " "
+done
+
+if [[ $(( $len % 2 )) -ne 0 ]]; then 
+	(( spaces=$spaces-1 ))
+fi 
+
+echo -n $word
+for (( s=0; s<$spaces; s++ ))
+do
+        echo -n " "
+done
+echo "#"
+
+#prints the padding
+for (( p=1; p<padding ; p++ ))
+do
+        echo -n "#"
+        for (( s=0; s<$width-2; s++ ))
+        do
+                echo -n " "
+        done
+        echo "#"
+done
+
+#print bottom frame
+for (( i=0; i<$width; i++ ))
+do
+        echo -n "#"
+done
+	echo " " #this is for going down one line
+  ``` 
+
 
 Development
 --------
