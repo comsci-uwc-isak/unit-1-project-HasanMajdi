@@ -30,7 +30,7 @@ Design
 
 ### flow diagram 
 ![CarRental](flow.jpg)
-**fg. 1**   
+**fg. 1**  this program 
 
 ### flow program for creating a frame in bash terminal
 
