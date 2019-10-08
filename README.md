@@ -25,13 +25,19 @@ For documentation READ.ME file will be provided and also bash help.
 so we decided to use a bash program for the solution because the user asks for something easy and simple.
 also we're working on the terminal because its already on the computer.
 ### Success Criteria
-A car can be created and stored in the database
-A car information can be edited
-A car can be deleted
-The installation is simple 
-A summery can be generated for a particular car
-Trips can be recorded and stored for an existing car.
-A basic backup plan is available.
+1.A car can be created and stored in the database
+
+2.A car information can be edited
+
+3.A car can be deleted
+
+4.The installation is simple 
+
+5.A summery can be generated for a particular car
+
+6.Trips can be recorded and stored for an existing car.
+
+7.A basic backup plan is available.
 
 Design
 ---------
