@@ -377,9 +377,15 @@ this script meets the requirement of the client for a simple instalation.
 
 ### problem solving 
 
-1 how to detect is a words lenght is odd or even 
-```.sh 
-if [ $len%2 -eq 0 ]
+How to detect a word's length is odd or even To detect if the number of characters in a string is odd or even, we must use module (%).
+```.sh
+
+(( isEven=$word%2 ))
+
+if [ $isEven -eq 0 ]; then
+    echo "This word has an even amount of characters"
+fi
+How to create an uninstall program To uninstall a folder with contents in bash, you must not only use the rm command, but also add the argument -r. Full command is rm -r Folder
 ```
 how to create a unistall program 
 rm -r app 
