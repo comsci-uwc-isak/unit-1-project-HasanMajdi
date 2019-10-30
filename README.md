@@ -49,7 +49,7 @@ Design
 ![CarRental](flow.jpg)
 **fg. 1**  this program creats a frame in the bash 
 # script for frame 
-``` sh 
+```.sh 
 
 #!/bin/bash
 
@@ -133,7 +133,44 @@ Edit the information
 
 Save new info 
 
-``` sh 
+
+```.sh 
+
+#!/bin/bash
+#This program edit the information of an exiting car in the
+#maincarfile
+#user enters [license place] [model] [red] [pp]
+
+if [ $# -ne 4 ]; then
+  echo "Error with the number of arguments"
+  echo "Enter License Maker Model Passengers"
+  exit
+fi
+
+license=$1
+maker=$2
+model=$3
+pp=$4
+
+cd ../Database
+
+if [ ! -f "$license.txt" ]; then
+  echo "File not found!"
+fi
+
+#find the line with the given car plate and delete it
+sed -i '' "/^$license/d" maincarfile.txt
+#add the new information
+echo "$license $maker $model $pp" >> maincarfile.txt
+cd ../scripts
+bash frame2 "Car edited successfully"
+
+```
+
+### Program for creating file structure for the rental app 
+
+```.sh 
+
 #!/bash/bin
 
 #This program creatsfile structure for the minimal rental app
@@ -152,9 +189,10 @@ mkdir sripts
 echo "installation complete successfully"
 
 ```
-this script meets the requirement of the client for a simple instalation
+this script meets the requirement of the client for a simple instalation.
 
 ### problem solving 
+
 1 how to detect is a words lenght is odd or even 
 ```.sh 
 if [ $len%2 -eq 0 ]
