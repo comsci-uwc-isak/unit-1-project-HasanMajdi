@@ -121,8 +121,63 @@ done
 
 
 Development
---------
-### Action: Edit 
+-----------
+### Actions: 1. Create a car
+
+this program creates a new car given four arguments #license #company #model #pessengers 
+
+```.sh 
+#!/bin/bash
+
+#This program creates a car given four arguments
+#License Maker Model Passengers
+
+if [ $# -ne 4 ]; then
+	echo "Error with the number of arguments"
+	echo "Enter License Maker Model Passengers"
+	exit
+fi
+
+#number of arguments is correct, continue
+license=$1
+maker=$2
+model=$3
+pp=$4
+
+#this creates a new line in the file maincarfile.txt inside CarRentalApp
+echo "$license $maker $model $pp" >> ../Database/maincarfile.txt
+echo "" > ../Database/$license.txt
+
+bash frame2 "Installation Completed"
+```
+### 2. Record
+
+records a trip for a car given.
+
+```.sh 
+
+!#/bin/bash 
+
+#this program records a trip in the file of a car provided 
+if [ $# -ne 2]; then
+	echo "error with in the number of arguments"
+	echo "enter license distance"
+
+fi
+km=$2
+license=$1
+#check if file exist. using the ! to ask if the file does not exist.
+if [ ! -f "$license.txt" ]; then 
+	echo "car does not exist"
+	exit
+fi
+echo "$km" >> $licnese.txt 
+bash frame3 "trip recorded successfully"
+
+```
+
+### 3. Edit 
+
 Get inputs (license plate)
   
 Check arguments and Check if car exists  (ONLY ONE) if not one then show a message to user to enter the right argument 
@@ -133,7 +188,6 @@ Edit the information
 
 Save new info 
 
-**fg. 1** program for editing 
 ```.sh 
 
 #!/bin/bash
@@ -166,7 +220,137 @@ cd ../scripts
 bash frame2 "Car edited successfully"
 
 ```
+### 4. Delete 
 
+this program delet a car given the licence of the car we want to delete
+
+```.sh 
+#!/bin/bash 
+
+#this program delete a car given one argument
+#licences 
+
+if [ $# -ne 1 ]; then rm -rf 
+	echo "error with the number of arguments"
+	echo " enter license"
+	exit 
+fi 
+
+#number of the arguments is correct, continue 
+license=$1
+
+#this delete an existing file maincarfile.txt inside CarRentalApp 
+echo "$license" > db/maincarfile.txt
+
+bash frame1 "car deleted successufully"
+```
+
+### 5. Backup.sh
+
+A program that creates a backup plan for the database folder
+
+```.sh 
+#!/bin/bash
+
+# This program creates a backup of the database folder in the app folder
+# Either backs up to the desktop, or to an USB stick
+
+# Starting
+echo "Backup starting"
+
+##### Save to the desktop
+# Navigate to the desktop to create a new folder (backup/)
+cd ~/desktop/
+# If theres already a folder called "backup", it is removed
+rm -r backup
+mkdir backup
+# Creats subfolder (backup/dataBase/)
+cd backup
+mkdir dataBase
+
+# Copies all (*) the files from the dataBase folder 
+# to the new folder (backup/) and subfolder (backup/dataBase/)
+cp ~/desktop/RentalCarApp/dataBase/* ~/desktop/backup/dataBase/
+
+### NOT NECESSARY, ONLY FOR AESTHETIC PURPOSES
+# Prints the frame
+# Navigates to the folder of the frame.sh script
+cd ~/Desktop/RentalCarApp/scripts/
+bash frame.sh "Installation complete"
+
+
+##### Save to a usb stick
+
+: '
+echo -n "What is your USB stick called? "
+read usbName
+
+cd /Volumes/%usbName/
+# If theres already a folder called "backup", it is removed
+rm -r backup
+mkdir backup
+# Creats subfolder (backup/dataBase/)
+cd backup
+mkdir dataBase
+
+# Copy files to USB stick
+cp ~/desktop/RentalCarApp/dataBase/* /Volumes/$usbName/backup/dataBase/
+
+```
+### 6. Summary 
+
+summarize the total distance traveled by a car 
+
+```.sh
+
+#!/bin/bash
+#This program summarizes the total distance traveled by a car.
+
+total=0
+
+#Read through the car's file
+FILE="../Database/$1.txt"
+while read line
+do
+  #Bash splits a line by spaces
+  for word in $line
+  do
+    km=$word
+#Calculate the total distance traveled
+    (( total=$total + $km ))
+    break
+  done
+done < $FILE
+
+#Print the car's file
+echo "Trips:"
+cd ../Database/
+cat $1.txt
+
+#Print the car's total distance travelled
+echo "Total distance travelled:" $total "km"
+```
+
+### 7. uninstallation
+
+deleting a created folder for reantal app car 
+
+```.sh 
+#!/bin/bash
+
+#this program will delete the created folders for the minimal rental app
+
+echo "Starting to uninstall"
+echo "uninstalling in the desktop (default). press enter"
+read
+cd ~/Desktop
+
+rm -r RentalCarApp
+
+
+echo "uninstallation complete successfully"
+
+```
 ### Program for creating file structure for the rental app 
 
 ```.sh 
