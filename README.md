@@ -47,8 +47,8 @@ Solution Overview
 
 ### flow diagram for creating a frame in bash terminal
 ![CarRental](flow.jpg)
-**fg. 1**  this program creats a frame in the bash 
-# script for frame 
+**fg. 1**  this program creats a frame in the bash.
+### script for frame 
 ```.sh 
 
 #!/bin/bash
