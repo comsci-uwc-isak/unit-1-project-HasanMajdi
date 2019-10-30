@@ -133,7 +133,7 @@ Edit the information
 
 Save new info 
 
-
+**fg. 1** program for editing 
 ```.sh 
 
 #!/bin/bash
