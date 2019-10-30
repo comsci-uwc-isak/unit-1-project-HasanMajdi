@@ -387,7 +387,7 @@ if [ $isEven -eq 0 ]; then
 fi
 How to create an uninstall program To uninstall a folder with contents in bash, you must not only use the rm command, but also add the argument -r. Full command is rm -r Folder
 ```
-how to create a unistall program 
+how to create a uninstallaion program 
 rm -r app 
 Evaluation
 -----------
