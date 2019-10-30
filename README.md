@@ -39,7 +39,7 @@ also we're working on the terminal because its already on the computer.
 
 7.A basic backup plan is available.
 
-Design
+Solution Overview
 ---------
 ### First sketch of system 
 ![CarRental](CSProject.jpg)
