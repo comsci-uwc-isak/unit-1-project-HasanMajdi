@@ -1,0 +1,11 @@
+.TH man 6 "1 Nov 2019" "1.0 " "Record man page"
+.SH NAME
+Record \- Record a car 
+.SH SYNOPSIS
+bash Record.sh [license] 
+.SH DESCRIPTION 
+this program records a trip in the database for a car provided
+.SH EXAMPLES 
+bash Record.sh XP2002L 
+.SH AUTHOR 
+Hasan Ali  
