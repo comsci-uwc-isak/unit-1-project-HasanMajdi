@@ -1,0 +1,11 @@
+.TH man 6 "1 Nov 2019" "1.0 " "Edit man page"
+.SH NAME
+Edit \- Edit a car 
+.SH SYNOPSIS
+bash Edit.sh [license] 
+.SH DESCRIPTION 
+Edit is a script that allows you to edit the information of an existing car 
+.SH EXAMPLES 
+bash Edit.sh XP2002L Nissan 2002 4 
+.SH AUTHOR 
+Hasan Ali  
