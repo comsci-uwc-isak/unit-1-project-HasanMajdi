@@ -351,7 +351,7 @@ rm -r RentalCarApp
 echo "uninstallation complete successfully"
 
 ```
-### Program for creating file structure for the rental app 
+### Install
 
 ```.sh 
 
@@ -371,13 +371,32 @@ cd RentalCarApp
 mkdir database
 mkdir sripts
 echo "installation complete successfully"
-
 ```
+Man Pages
+----------
+Create
+```
+.TH man 6 "31 Oct 2019" "1.0 " "create man page"
+.SH NAME
+create \- create a car 
+.SH SYNOPSIS
+bash create.sh [license] [model] [color] [passenger] 
+.SH DESCRIPTION 
+create is a script that add the information of the a car into maincarfile and its own information file 
+.SH EXAMPLES 
+bash create.sh XP2002L Nissan 2002 4 
+.SH AUTHOR 
+Hasan Ali  
+``` 
+Record
+```
+
 this script meets the requirement of the client for a simple instalation.
 
-### problem solving 
+### problem solving
 
 How to detect a word's length is odd or even To detect if the number of characters in a string is odd or even, we must use module (%).
+
 ```.sh
 
 (( isEven=$word%2 ))
