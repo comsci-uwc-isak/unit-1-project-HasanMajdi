@@ -372,6 +372,8 @@ mkdir database
 mkdir sripts
 echo "installation complete successfully"
 ```
+this script meets the requirement of the client for a simple instalation.
+
 Man Pages
 ----------
 Create
@@ -390,9 +392,32 @@ Hasan Ali
 ``` 
 Record
 ```
-
-this script meets the requirement of the client for a simple instalation.
-
+.TH man 6 "1 Nov 2019" "1.0 " "Record man page"
+.SH NAME
+Record \- Record a car 
+.SH SYNOPSIS
+bash Record.sh [license] 
+.SH DESCRIPTION 
+this program records a trip in the database for a car provided
+.SH EXAMPLES 
+bash Record.sh XP2002L 
+.SH AUTHOR 
+Hasan Ali 
+```
+Delete
+```
+TH man 6 "1 Nov 2019" "1.0 " "Edit man page"
+.SH NAME
+Edit \- Edit a car
+.SH SYNOPSIS
+bash Edit.sh [license]
+.SH DESCRIPTION
+Edit is a script that allows you to edit the information of an existing car
+.SH EXAMPLES
+bash Edit.sh XP2002L Nissan 2002 4
+.SH AUTHOR
+Hasan Ali
+```
 ### problem solving
 
 How to detect a word's length is odd or even To detect if the number of characters in a string is odd or even, we must use module (%).
