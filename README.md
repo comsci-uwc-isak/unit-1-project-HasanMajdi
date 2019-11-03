@@ -125,8 +125,11 @@ done
 Development
 -----------
 ### Actions: 1. Create a car
-
-this program creates a new car given four arguments #license #company #model #pessengers 
+this program creates a new car given four arguments #license #company #model #pessengers
+steps: 
+1. Check the arguments enered 
+2. Create a line inside Database/Maincarfile
+3. Create a $licenes.TXT file 
 
 ```.sh 
 #!/bin/bash
@@ -153,9 +156,11 @@ echo "" > ../Database/$license.txt
 bash frame2 "Installation Completed"
 ```
 ### 2. Record
-
 records a trip for a car given.
-
+Steps: 
+1. check if the arguments are correct 
+2. open Database, check if file exists
+3. record the km added to the licene provided
 ```.sh 
 
 !#/bin/bash 
@@ -181,7 +186,12 @@ bash frame3 "trip recorded successfully"
 ### 3. Edit 
 
 Get inputs (license plate)
-  
+  Steps:
+  1. Check if the arguments are correct 
+  2. go to database 
+  3. if the license exists then: 
+  4. Delete it, and add the new information
+
 Check arguments and Check if car exists  (ONLY ONE) if not one then show a message to user to enter the right argument 
 
 If one then show a message asking what do you want to edit ? (color, name, model, ect..)
@@ -225,6 +235,10 @@ bash frame2 "Car edited successfully"
 ### 4. Delete 
 
 this program delet a car given the licence of the car we want to delete
+stepts: 
+1. check the arguments 
+2. Open Database/Maincarfile
+3. Delete the license entered
 
 ```.sh 
 #!/bin/bash 
@@ -250,6 +264,13 @@ bash frame1 "car deleted successufully"
 ### 5. Backup.sh
 
 A program that creates a backup plan for the database folder
+Steps: 
+1. Open Desktop
+2. Remove any file called Backup 
+3. Create file with the name Backup
+4. inside Backup, create; Datebase and Scripts 
+5. Copy all files from Database and Scripts 
+6. Paste in the new file Backup 
 
 ```.sh 
 #!/bin/bash
@@ -354,6 +375,10 @@ echo "uninstallation complete successfully"
 
 ```
 ### Install
+this program install the files required for the app 
+1. Go to Desktop 
+2. Create a folder RentalCarApp 
+3. Open the folder, inside it create Database and Scripts
 
 ```.sh 
 
