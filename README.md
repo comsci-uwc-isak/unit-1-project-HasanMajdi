@@ -133,6 +133,9 @@ steps:
 2. Create a line inside Database/Maincarfile
 3. Create a $licenes.TXT file 
 
+flow diagram for Craete 
+![CarRental](Create.jpg)
+
 ```.sh 
 #!/bin/bash
 
