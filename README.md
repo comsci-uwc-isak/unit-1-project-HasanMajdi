@@ -45,12 +45,14 @@ Solution Overview
 ![CarRental](CSProject.jpg)
 **fig. 1** This program shows the main components of the minimal rental app. it includes the Output/Input and actions. 
 
-### flow diagram for creating a frame in bash terminal
-![CarRental](flow.jpg)
-**fg. 1**  this program creats a frame in the bash.
 ### Test Planing 
 ![CarRental](CS.jpg)
 ### script for frame 
+
+### flow diagram for creating a frame in bash terminal
+![CarRental](flow.jpg)
+**fg. 1**  this program creats a frame in the bash.
+
 ```.sh 
 
 #!/bin/bash
