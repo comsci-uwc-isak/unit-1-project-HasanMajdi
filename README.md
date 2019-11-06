@@ -152,13 +152,13 @@ fi
 license=$1
 maker=$2
 model=$3
-pp=$4
+passenger=$4
 
 #this creates a new line in the file maincarfile.txt inside CarRentalApp
 echo "$license $maker $model $pp" >> ../Database/maincarfile.txt
 echo "" > ../Database/$license.txt
 
-bash frame2 "Installation Completed"
+bash frame.sh "Installation Completed"
 ```
 ### 2. Record
 records a trip for a car given.
@@ -184,7 +184,7 @@ if [ ! -f "$license.txt" ]; then
 	exit
 fi
 echo "$km" >> $licnese.txt 
-bash frame3 "trip recorded successfully"
+bash frame.sh "trip recorded successfully"
 
 ```
 
@@ -196,7 +196,7 @@ Get inputs (license plate)
   2. go to database 
   3. if the license exists then: 
   4. Delete it, and add the new information
-
+.
 Check arguments and Check if car exists  (ONLY ONE) if not one then show a message to user to enter the right argument 
 
 If one then show a message asking what do you want to edit ? (color, name, model, ect..)
@@ -210,7 +210,7 @@ Save new info
 #!/bin/bash
 #This program edit the information of an exiting car in the
 #maincarfile
-#user enters [license place] [model] [red] [pp]
+#user enters [license place] [maker] [model] [passenger]
 
 if [ $# -ne 4 ]; then
   echo "Error with the number of arguments"
@@ -221,7 +221,7 @@ fi
 license=$1
 maker=$2
 model=$3
-pp=$4
+passenger=$4
 
 cd ../Database
 
@@ -234,7 +234,7 @@ sed -i '' "/^$license/d" maincarfile.txt
 #add the new information
 echo "$license $maker $model $pp" >> maincarfile.txt
 cd ../scripts
-bash frame2 "Car edited successfully"
+bash frame.sh "Car edited successfully"
 
 ```
 ### 4. Delete 
@@ -261,9 +261,9 @@ fi
 license=$1
 
 #this delete an existing file maincarfile.txt inside CarRentalApp 
-echo "$license" > db/maincarfile.txt
+echo "$license" > Datsbase/maincarfile.txt
 
-bash frame1 "car deleted successufully"
+bash frame.sh "car deleted successufully"
 ```
 
 ### 5. Backup.sh
@@ -278,6 +278,7 @@ Steps:
 6. Paste in the new file Backup 
 
 ```.sh 
+
 #!/bin/bash
 
 # This program creates a backup of the database folder in the app folder
@@ -287,18 +288,30 @@ Steps:
 echo "Backup starting"
 
 ##### Save to the desktop
-# Navigate to the desktop to create a new folder (backup/)
+
 cd ~/desktop/
-# If theres already a folder called "backup", it is removed
+
 rm -r backup
 mkdir backup
+
 # Creats subfolder (backup/dataBase/)
+
 cd backup
 mkdir dataBase
+mkdir Scripts
+
 
 # Copies all (*) the files from the dataBase folder 
 # to the new folder (backup/) and subfolder (backup/dataBase/)
+
 cp ~/desktop/RentalCarApp/dataBase/* ~/desktop/backup/dataBase/
+cp ~/desktop/RentalCarApp/scripts/* ~/desktop/backup/Scripts/
+
+### NOT NECESSARY, ONLY FOR AESTHETIC PURPOSES
+# Prints the frame
+# Navigates to the folder of the frame.sh script
+
+cd ~/Desktop/RentalCarApp/scripts/
 
 ### NOT NECESSARY, ONLY FOR AESTHETIC PURPOSES
 # Prints the frame
@@ -306,28 +319,10 @@ cp ~/desktop/RentalCarApp/dataBase/* ~/desktop/backup/dataBase/
 cd ~/Desktop/RentalCarApp/scripts/
 bash frame.sh "Installation complete"
 
-
-##### Save to a usb stick
-
-: '
-echo -n "What is your USB stick called? "
-read usbName
-
-cd /Volumes/%usbName/
-# If theres already a folder called "backup", it is removed
-rm -r backup
-mkdir backup
-# Creats subfolder (backup/dataBase/)
-cd backup
-mkdir dataBase
-
-# Copy files to USB stick
-cp ~/desktop/RentalCarApp/dataBase/* /Volumes/$usbName/backup/dataBase/
-
 ```
 ### 6. Summary 
 
-summarize the total distance traveled by a car 
+Summarize the total distance traveled by a car 
 
 ```.sh
 
@@ -335,6 +330,7 @@ summarize the total distance traveled by a car
 #This program summarizes the total distance traveled by a car.
 
 total=0
+license=$1
 
 #Read through the car's file
 FILE="../Database/$1.txt"
@@ -400,8 +396,8 @@ mkdir RentalCarApp
 
 cd RentalCarApp
 
-mkdir database
-mkdir sripts
+mkdir Database
+mkdir Scripts
 echo "installation complete successfully"
 ```
 this script meets the requirement of the client for a simple instalation.
@@ -465,11 +461,12 @@ How to create an uninstall program To uninstall a folder with contents in bash, 
 ``` 
 Evaluation
 -----------
-Test 1: A car can be created and sorted in the database 
+# Test for create 
+A car can be created and sorted in the database 
 for this purpose we will create the file testCreate.sh. this is called software testing 
-# step1 navigate to the folder containing crete.sh file
+step1 navigate to the folder containing crete.sh file
 
-first step is to check for the file 
+*first step is to check for the file 
 ```.sh
 cd../scripts/
 if [ -f "createe.sh" ]; then
@@ -481,5 +478,18 @@ fi
 here the option -f in the if condition checks for a file in the working folder 
 
 this refers to dynamic testing and alpha.
+*second step is to check that the .txt file was created inside the database
 
-
+```.sh
+cd ../database
+if [ -f "XP20022L.txt" ]; then
+    echo " file with the license plate created successfully."
+else
+    echo " file is not found. "
+    exit
+fi
+```
+improvements
+-------------
+What we can improve in this application maybe adding another program to calculate the amount of money each car is making every month, or the summary of the amount of money all cars make monthly.
+Another possible improvement is to make using the progrm from several locations not only from dektop so it will be more flexible for the user. 
