@@ -25,19 +25,19 @@ For documentation READ.ME file will be provided and also bash help.
 so we decided to use a bash program for the solution because the user asks for something easy and simple.
 also we're working on the terminal because its already on the computer.
 ### Success Criteria
-1.A car can be created and stored in the database
+1. A car can be created and stored in the database
 
-2.A car information can be edited
+2. A car information can be edited
 
-3.A car can be deleted
+3. A car can be deleted
 
-4.The installation is simple 
+4. The installation is simple 
 
-5.A summery can be generated for a particular car
+5. A summery can be generated for a particular car
 
-6.Trips can be recorded and stored for an existing car.
+6. Trips can be recorded and stored for an existing car.
 
-7.A basic backup plan is available.
+7. A basic backup plan is available.
 
 Solution Overview
 ---------
@@ -489,6 +489,22 @@ else
     exit
 fi
 ```
+### Success Criteria (Check)
+
+1. A car can be created and stored in the database : YES
+
+2. A car information can be edited : YES
+
+3. A car can be deleted : YES
+
+4. The installation is simple : YES
+
+5. A summery can be generated for a particular car : YES
+
+6. Trips can be recorded and stored for an existing car : YES
+
+7. A basic backup plan is available : YES
+
 improvements
 -------------
 What we can improve in this application maybe adding another program to calculate the amount of money each car is making every month, or the summary of the amount of money all cars make monthly.
