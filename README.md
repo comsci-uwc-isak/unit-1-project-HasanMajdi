@@ -8,7 +8,7 @@ A car rental management minimal app in Bash.
 Contents
 -----
   1. [Planning](#planning)
-  1. [SolutionOverview](#Solution Overview)
+  1. [SolutionOverview](#SolutionOverview)
   1. [Development](#development)
   1. [Evalution](#evaluation)
   1. [improvements](#improvements)
