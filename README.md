@@ -462,9 +462,7 @@ if [ $isEven -eq 0 ]; then
     echo "This word has an even amount of characters"
 fi
 How to create an uninstall program To uninstall a folder with contents in bash, you must not only use the rm command, but also add the argument -r. Full command is rm -r Folder
-```
-how to create a uninstallaion program 
-rm -r app 
+``` 
 Evaluation
 -----------
 Test 1: A car can be created and sorted in the database 
@@ -482,5 +480,6 @@ fi
 ```
 here the option -f in the if condition checks for a file in the working folder 
 
-this correspnds to dynamic testing and alpha.
+this refers to dynamic testing and alpha.
+
 
