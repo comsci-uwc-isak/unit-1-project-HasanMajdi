@@ -1,4 +1,10 @@
 ![CarRental](logo.png)
+```.py
+Marks= 17
+Demo=-
+Total=(Marks+Demo)= 17
+```
+**Graded on Nov 11**
 
 Car Rental Minimal App
 ===========================
@@ -41,11 +47,40 @@ also we're working on the terminal because its already on the computer.
 
 7. A basic backup plan is available.
 
+**Criterion A**
+
+|Level|Descriptor|
+|----|-----|
+|3|The client in the car rental office is identified and his situation is stated. The rationale for choosing the proposed product is partially explained and includes some appropriate criteria for evaluating the success of the product.|
+```.sh
+Rational
+* You can improve this criterion by solving the following questions about the context: Who is the client?
+Why is the product being developed?
+* One more justificaiton for using BASH is that we were learning it. 
+* Research on the internet other features of BASH that makes it a good choice for this system
+* Do you think the solution proposed solve the problem for the client? this is what you need to justify in the section "solution proposed"
+```
+
+
 Solution Overview
 ---------
 ### First sketch of system 
 ![CarRental](CSProject.jpg)
 **fig. 1** This program shows the main components of the minimal rental app. it includes the Output/Input and actions. 
+
+## Criterion B
+|**level**|**Description**|
+|-----|------------|
+|6|An outline test plan is included but partially complete. A system diagram and some flow diagrams for algorithms in the product are included. They provide a basic understanding of how the product was developed.|
+```.sh
+Rationale
+* The flow diagrams are understandable but on a very rough shape. This is good for a first submission but it will not look well for the upcoming units. You will have to make them digital (using the computer) or neatly by hand. 
+* You are losing marks in this criterion because you did not include the figure descriptions after every figure. 
+The description is a paragraph that explains the figure and tells the reader why you included the figure: "As seen in Fig. 1. the system proposed for the CarRentalApp consist of ..."
+* The test plan seems complete. It will also be improved by creating a neat table.
+* The flow diagrams are incomplete, they do not seem to finish ever.
+```
+
 
 ### Test Planing 
 ![CarRental](CS.jpg)
@@ -54,6 +89,8 @@ Solution Overview
 ### flow diagram for creating a frame in bash terminal
 ![CarRental](flow.jpg)
 **fg. 1**  this program creats a frame in the bash.
+
+
 
 ```.sh 
 
@@ -461,6 +498,19 @@ if [ $isEven -eq 0 ]; then
 fi
 How to create an uninstall program To uninstall a folder with contents in bash, you must not only use the rm command, but also add the argument -r. Full command is rm -r Folder
 ``` 
+
+
+## Criterion C
+|**level**|**Description**|
+|-----|------------|
+|5|The proposed solution is characterized by the appropriate use of existing tools. The techniques are adequate for the task and their use is explained. All sources are identified.|
+```.sh
+Rationale
+* Evidence here is sufficient.
+* One thing you can improve is to research a bit about ManPages and explain what they are/who use them before showing your own manpages.
+* You can also include the citations to the references of the sources that you researched in the internet using MLA format. For example: "As shown in [1], to read a file in bash we can use:"  then the reference in the bottom of the document in the References section: [1] Doe, J "Read files in bash", 2019 ..... 
+```
+
 Evaluation
 -----------
 # Test for create 
@@ -511,3 +561,14 @@ improvements
 -------------
 What we can improve in this application maybe adding another program to calculate the amount of money each car is making every month, or the summary of the amount of money all cars make monthly.
 Another possible improvement is to make using the progrm from several locations not only from dektop so it will be more flexible for the user. 
+
+## Criterion D
+|**level**|**Description**|
+|-----|------------|
+|3|The product is partially evaluated against the success criteria identified in criterion A. Recommendations for further improvement of the product are largely realistic.
+|
+```.sh
+Rationale
+* You evaluation of the success criteria included but no justification is provided. How do you know they are MET?
+* Future improvements are realistic.
+```
